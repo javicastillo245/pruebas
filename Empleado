@@ -1,0 +1,50 @@
+package trabajoEntornos;
+
+public class Empleado {
+
+    // Atributo que representa el ID del empleado
+    private int id;
+    // Atributo que almacena el nombre del empleado
+    private String nombre;
+    // Atributo que indica el cargo del empleado
+    private String cargo;
+    // Atributo que representa el DNI del empleado
+    private int DNI;
+
+    // Constructor de la clase Empleado
+    public Empleado(int id, String nombre, String cargo, int DNI) {
+        // Inicializa los atributos del empleado con los valores proporcionados
+        this.id = id;
+        this.nombre = nombre;
+        this.cargo = cargo;
+        this.DNI = DNI;
+    }
+
+    // Método para procesar ventas
+    public void procesarVentas() {
+        // Imprime un mensaje indicando que el empleado está procesando ventas
+        System.out.println("El empleado " + nombre + " está procesando ventas.");
+    }
+
+    // Método para obtener el DNI del empleado
+    public int getDNI() {
+        return DNI; // Retorna el DNI del empleado
+    }
+
+    // Método para establecer un nuevo DNI
+    public void setDNI(int DNI) {
+        this.DNI = DNI; // Actualiza el DNI del empleado
+    }
+
+    // Método para ascender al empleado a un puesto superior
+    public void ascenderPuesto() {
+        // Verifica el cargo actual y lo actualiza según la jerarquía definida
+        if (cargo.equals("Vendedor")) {
+            cargo = "Jefe de Ventas"; // Asciende de Vendedor a Jefe de Ventas
+        } else if (cargo.equals("Jefe de Ventas")) {
+            cargo = "Gerente"; // Asciende de Jefe de Ventas a Gerente
+        }
+        // Imprime un mensaje indicando el nuevo cargo del empleado
+        System.out.println("El empleado ha sido ascendido a: " + cargo);
+    }
+}
