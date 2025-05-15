@@ -1,7 +1,7 @@
 package trabajoEntornos;
 
 public class Producto {
-
+    //Declaramos variables
     private int id;
     private String nombre;
     float precio;
@@ -16,7 +16,7 @@ public class Producto {
         this.stock = stock;
         this.disponibilidad = stock > 0;
     }
-
+    // Actualiza el stock
     public void actualizarStock() {
         if (stock > 0) {
                 stock--;
@@ -25,7 +25,7 @@ public class Producto {
             }
         }
     }
-
+    //Get y set
     public boolean getDisponibilidad() {
         return disponibilidad;
     }
@@ -33,12 +33,12 @@ public class Producto {
     public void setDisponibilidad(boolean disponibilidad) {
         this.disponibilidad = disponibilidad;
     }
-
+    //Vacia el stock
     public void vaciarStock() {
         stock = 0;
         disponibilidad = false;
-    }
-
+    }    
+    //Devuelve el nombre del producto
     public String nombreProducto() {
         return nombre;
     }
